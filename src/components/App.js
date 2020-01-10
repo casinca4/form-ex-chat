@@ -1,10 +1,17 @@
 import React from 'react';
 import '../scss/App.scss';
+import Chat from './Chat';
+import Message from './Message';
 
 class App extends React.Component {
-  render () {
-      return (<h1>hello</h1>)
-  }
+    render() {
+        return (
+            <main>
+                <Chat></Chat> 
+                <Message></Message>
+            </main>
+        );
+    }
 
 
 }
