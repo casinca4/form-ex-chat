@@ -1,3 +1,109 @@
-body {
-    background-image: url('https://public-v2links.adobecc.com/a8564d0f-acf5-4077-70b8-0469c4129534/component?params=component_id%3Ab9f83c88-72f3-4b10-bf25-9dcfc3b0d08c&params=version%3A0&token=1578643470_da39a3ee_60181c23d58fd274d76069d65135f6e345b93d4e&api_key=CometServer1')
+html, body, #root {
+	width: 100%;
+	height: 100%;
+	margin: 0;
 }
+
+body {
+	background-image: url('/home/dci/SPA/form-ex-chat/src/images/Simon_Stalenhag_Concept_Illustration_42.png')
+}
+
+#root {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+main {
+
+	background: #352C46;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	margin: 0;
+	width: 400px;
+	height: 100%;
+		
+		.chat {
+			background: #352C46;
+			.sender {
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-start;
+				padding: 5px;
+				.output-sender {
+					background: #222222;	
+					border-radius: 50px;
+					color: white;
+					margin: 0 5px;
+					text-align: center;
+					.text {
+						padding: 0 5px;
+					}
+				}
+			}
+			.recipient {
+				display: flex;
+  		  flex-direction: row;
+    		justify-content: flex-end;
+   		 	padding: 5px;
+			}
+				.time {
+					color: white;
+				}
+				.output-recipient {
+					background: #222222;	
+					border-radius: 50px;
+					color: white;
+					margin: 0 5px;
+					text-align: center;
+					.text {
+						padding: 0 5px;
+					}
+				}
+		}
+
+    .message {
+			background: #282833;
+		
+			form {
+				display: flex;
+				justify-content: center;
+				background: #282833;
+				.text-input {
+					background-color: #222222;
+					// border: 0;
+					border-radius: 50px;
+					color: white;
+					padding: 10px;
+				}
+				.send-button {
+					background: #222222;
+					border: 0;
+					border-radius: 50px;
+					color: #9573BC;
+					padding: 10px;
+				}
+			}
+
+			.participants {
+				display: flex;
+				justify-content: center;
+					#you {
+						background: #9573BC;
+						border-radius: 50px;
+						color: black;
+						display: flex;
+						padding: 10px;
+				}
+					#friend {
+						background: #222222;
+						border-radius: 50px;
+						color: white;
+						display: flex;
+						padding: 10px;
+				}
+			}
+		}
+}
+
