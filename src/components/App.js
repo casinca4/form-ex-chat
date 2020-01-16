@@ -3,6 +3,7 @@ import '../scss/App.scss';
 import Chat from './Chat';
 import Message from './Message';
 
+
 class App extends React.Component {
     render() {
         return (
@@ -12,8 +13,6 @@ class App extends React.Component {
             </main>
         );
     }
-
-
 }
 
 export default App;

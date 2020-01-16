@@ -17,6 +17,7 @@ class Message extends React.Component {
     alert('A name was submitted: ' + this.state.value);
     event.preventDefault();
   }
+  
   render() {
     return (
       <section className="message">
@@ -27,8 +28,12 @@ class Message extends React.Component {
             <input class="send-button" type="submit" value="SEND" />
           </form>
           <div className="participants">
-            <p id="you">YOU</p>
-            <p id="friend">YOUR IMAGINARY FRIEND</p>
+            <div id="you" className="btn">
+            <p>YOU</p>
+            </div>
+            <div id="friend" className="btn">
+            <p >YOUR IMAGINARY FRIEND</p>
+            </div>
           </div>
       </section>
     );

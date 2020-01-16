@@ -1,4 +1,5 @@
 import React from 'react';
+import avatar from '../images/noodle.png'
 
 class Chat extends React.Component {
 
@@ -7,7 +8,7 @@ class Chat extends React.Component {
         return (
             <section className="chat">
                 <div className="sender">
-                    <img src="src/images/1edfbf9af969d9d0cfd09e863b795b1f.png" alt="avatar sender"></img>
+                    <img src={avatar} alt="avatar sender"></img>
                     <div className="output-sender">
                         <p className="text">text</p>
                     </div>

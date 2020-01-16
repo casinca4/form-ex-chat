@@ -5,7 +5,8 @@ html, body, #root {
 }
 
 body {
-	background-image: url('/home/dci/SPA/form-ex-chat/src/images/Simon_Stalenhag_Concept_Illustration_42.png')
+	background-image: url('../images/Simon_Stalenhag_Concept_Illustration_42.png');
+	background-size: cover;
 }
 
 #root {
@@ -21,7 +22,7 @@ main {
 	flex-direction: column;
 	justify-content: flex-end;
 	margin: 0;
-	width: 400px;
+	width: 600px;
 	height: 100%;
 		
 		.chat {
@@ -68,20 +69,25 @@ main {
 		
 			form {
 				display: flex;
-				justify-content: center;
+				justify-content: space-between;
 				background: #282833;
 				.text-input {
 					background-color: #222222;
 					// border: 0;
 					border-radius: 50px;
 					color: white;
+					margin: 10px;
 					padding: 10px;
+					width: 220%;
 				}
 				.send-button {
 					background: #222222;
 					border: 0;
 					border-radius: 50px;
 					color: #9573BC;
+					// display: flex;
+					// justify-content: flex-end;
+					margin: 10px;
 					padding: 10px;
 				}
 			}
@@ -89,20 +95,24 @@ main {
 			.participants {
 				display: flex;
 				justify-content: center;
-					#you {
+					.btn {
 						background: #9573BC;
 						border-radius: 50px;
 						color: black;
 						display: flex;
-						padding: 10px;
+						font-size: 15px;
+						padding: 0px 15px;
+						margin: 10px;
 				}
-					#friend {
-						background: #222222;
-						border-radius: 50px;
-						color: white;
-						display: flex;
-						padding: 10px;
-				}
+				
+				// 	#friend {
+				// 		background: #222222;
+				// 		border-radius: 50px;
+				// 		color: white;
+				// 		display: flex;
+				// 		font-size: 15px;
+				// 		padding: 0 15px;
+				// }
 			}
 		}
 }
