@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/form-ex-chat/static/css/main.b99d3023.chunk.css",
+    "main.js": "/form-ex-chat/static/js/main.e68a8e45.chunk.js",
+    "main.js.map": "/form-ex-chat/static/js/main.e68a8e45.chunk.js.map",
+    "runtime-main.js": "/form-ex-chat/static/js/runtime-main.f21057f2.js",
+    "runtime-main.js.map": "/form-ex-chat/static/js/runtime-main.f21057f2.js.map",
+    "static/js/2.92d5e9a2.chunk.js": "/form-ex-chat/static/js/2.92d5e9a2.chunk.js",
+    "static/js/2.92d5e9a2.chunk.js.map": "/form-ex-chat/static/js/2.92d5e9a2.chunk.js.map",
+    "index.html": "/form-ex-chat/index.html",
+    "precache-manifest.78c32309a4298a3065b58adf640afda3.js": "/form-ex-chat/precache-manifest.78c32309a4298a3065b58adf640afda3.js",
+    "service-worker.js": "/form-ex-chat/service-worker.js",
+    "static/css/main.b99d3023.chunk.css.map": "/form-ex-chat/static/css/main.b99d3023.chunk.css.map",
+    "static/js/2.92d5e9a2.chunk.js.LICENSE": "/form-ex-chat/static/js/2.92d5e9a2.chunk.js.LICENSE",
+    "static/media/App.scss": "/form-ex-chat/static/media/Simon_Stalenhag_Concept_Illustration_42.878ecc0f.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f21057f2.js",
+    "static/js/2.92d5e9a2.chunk.js",
+    "static/css/main.b99d3023.chunk.css",
+    "static/js/main.e68a8e45.chunk.js"
+  ]
+}
