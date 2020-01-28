@@ -1,43 +1,74 @@
 import React from 'react';
+import noodle from '../images/noodle.png';
+import sad from '../images/sad.png';
+import Chat from './Chat';
 
-class Message extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { value: '' };
+const Message = props => {
+  const messages = props.messages;
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+  function makeTimePerfect(time) {
+    const date = new Date(time);
+    const hours = date.getHours();
+    const minutes = '0' + date.getMinutes();
+    const formattedTime = `${hours}:${minutes.substr(-2)}`;
+    return formattedTime;
   }
 
-  handleChange(event) {
-    this.setState({ value: event.target.value });
-  }
+  const messageItems = messages.map(el => {
+    const beauTime = makeTimePerfect(el.timestamp);
 
-  handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
-    event.preventDefault();
-  }
-  
-  render() {
     return (
-      <section className="message">
-          <form className="input-message" onSubmit={this.handleSubmit}>
-            <label>
-              <input class="text-input" type="text" value={this.state.value} onChange={this.handleChange} />
-            </label>
-            <input class="send-button" type="submit" value="SEND" />
-          </form>
-          <div className="participants">
-            <div id="you" className="btn">
-            <p>YOU</p>
-            </div>
-            <div id="friend" className="btn">
-            <p >YOUR IMAGINARY FRIEND</p>
-            </div>
-          </div>
-      </section>
+      <div
+        className={el.sender === 'user-2' ? 'message sent' : 'message received'}
+        key={el.timestamp}
+      >
+        <div className="avatar">
+          <img src={el.sender === 'user-1' ? sad : noodle}></img>
+        </div>
+        <div className="text">
+          <p>{el.message}</p>
+        </div>
+        <div className="time">
+          <p>{beauTime}</p>
+        </div>
+      </div>
     );
-  }
-}
+    // if (el.sender == 'user-1') {
+    //   return (
+    //     <div className="message sent">
+    //       <div className="avatar">
+    //         <img src={noodle}></img>
+    //       </div>
+    //       <div className="text">
+    //         <p>{el.message}</p>
+    //       </div>
+    //       <div className="time">
+    //         <p>{el.timestamp}</p>
+    //       </div>
+    //     </div>
+    //   );
+    // } else if (el.sender == 'user-2') {
+    //   return (
+    //     <div className="message received">
+    //       <div className="avatar">
+    //         <img src={sad}></img>
+    //       </div>
+    //       <div className="text">
+    //         <p>{el.message}</p>
+    //       </div>
+    //       <div className="time">
+    //         <p>{el.timestamp}</p>
+    //       </div>
+    //     </div>
+    //   );
+    // }
+  });
+  return (
+    <div className="messages-container">
+      {props.typing && <Chat userId={props.userId}></Chat>}
+      {messageItems}
+    </div>
+  );
+};
 
 export default Message;

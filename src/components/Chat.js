@@ -1,31 +1,22 @@
 import React from 'react';
-import avatar from '../images/noodle.png'
+import noodle from '../images/noodle.png';
+import sad from '../images/sad.png';
 
-class Chat extends React.Component {
-
-
-    render() {
-        return (
-            <section className="chat">
-                <div className="sender">
-                    <img src={avatar} alt="avatar sender"></img>
-                    <div className="output-sender">
-                        <p className="text">text</p>
-                    </div>
-                    <div className="time">time</div>
-                </div>
-
-                <div className="recipient">
-                    <div className="time">time</div>
-                    <div className="output-recipient">
-                        <p className="text">text</p>
-                    </div>
-                    <img src="src/images/Come-and-See-Poster-janus.png" alt="avatar recipient"></img>
-                </div>
-            </section>
-        );
-    }
-}
+const Chat = props => {
+  return (
+    <div
+      className={
+        props.userId === 'user-2' ? 'message sent' : 'message received'
+      }
+    >
+      <div className="avatar">
+        <img src={props.userId === 'user-1' ? sad : noodle}></img>
+      </div>
+      <div className="text">
+        <p>...</p>
+      </div>
+    </div>
+  );
+};
 
 export default Chat;
-
