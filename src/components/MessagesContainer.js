@@ -1,9 +1,9 @@
 import React from 'react';
 import noodle from '../images/noodle.png';
 import sad from '../images/sad.png';
-import Chat from './Chat';
+import TypingMessage from './TypingMessage';
 
-const Message = props => {
+const MessagesContainer = props => {
   const messages = props.messages;
 
   function makeTimePerfect(time) {
@@ -65,10 +65,10 @@ const Message = props => {
   });
   return (
     <div className="messages-container">
-      {props.typing && <Chat userId={props.userId}></Chat>}
+      {props.typing && <TypingMessage userId={props.userId}></TypingMessage>}
       {messageItems}
     </div>
   );
 };
 
-export default Message;
+export default MessagesContainer;

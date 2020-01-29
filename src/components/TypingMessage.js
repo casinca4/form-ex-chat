@@ -2,7 +2,7 @@ import React from 'react';
 import noodle from '../images/noodle.png';
 import sad from '../images/sad.png';
 
-const Chat = props => {
+const TypingMessage = props => {
   return (
     <div
       className={
@@ -19,4 +19,4 @@ const Chat = props => {
   );
 };
 
-export default Chat;
+export default TypingMessage;

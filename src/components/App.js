@@ -1,7 +1,7 @@
 import React from 'react';
 import '../scss/App.scss';
 import { Button, Container } from '@material-ui/core';
-import Message from './Message';
+import MessagesContainer from './MessagesContainer';
 import { debounce } from 'lodash';
 
 class App extends React.Component {
@@ -60,11 +60,11 @@ class App extends React.Component {
     return (
       <div id="app">
         <Container disableGutters id="container" maxWidth="sm" p={0}>
-          <Message
+          <MessagesContainer
             typing={this.state.typing}
             messages={this.state.messages}
             userId={this.state.userId}
-          ></Message>
+          ></MessagesContainer>
           <div className="form-container">
             <div className="form">
               <form autoComplete="off" onSubmit={this.handleSubmit}>
